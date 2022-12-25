@@ -1,0 +1,71 @@
+CREATE TABLE IF NOT EXISTS `employee` (
+  `id` int(11) NOT NULL,
+  `emp_id` int(11) NOT NULL,
+  `bn_name` varchar(80) NOT NULL,
+  `en_name` varchar(80) NOT NULL,
+  `designation` varchar(20) NOT NULL,
+  `cell_id` int(11) NOT NULL,
+  `usertype` varchar(11) NOT NULL,
+  `pwd` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+
+CREATE TABLE IF NOT EXISTS `designation` (
+  `id` int(11) NOT NULL,
+  `title` varchar(60) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+
+
+
+INSERT INTO `designation` (`id`, `title`) VALUES
+(1, 'Principal Officer IT'),
+(2, 'Senior Officer IT'),
+(3, 'Officer IT
+');
+
+
+
+
+ALTER TABLE `employee`
+  ADD PRIMARY KEY (`id`);
+
+
+
+ALTER TABLE `designation`
+  ADD PRIMARY KEY (`id`);
+
+
+
+ALTER TABLE `employee`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+
+
+ALTER TABLE `designation`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+
+
+
+
+CREATE TABLE IF NOT EXISTS `office_order` (
+  `id` int(11) NOT NULL,
+  `en_name` varchar(80) NOT NULL,
+  `bn_name` varchar(80) NOT NULL,
+  `designation` varchar(40) NOT NULL,
+  `shift` varchar(40) NOT NULL,
+  `datepicker` varchar(20) NOT NULL,
+  `time_from` varchar(20) NOT NULL,
+  `time_t0` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+ALTER TABLE `office_order`
+  ADD PRIMARY KEY (`id`);
+
+
+ALTER TABLE `office_order`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
