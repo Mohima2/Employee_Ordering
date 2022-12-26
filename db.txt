@@ -1,0 +1,96 @@
+CREATE TABLE IF NOT EXISTS `shift` (
+  `id` int(11) NOT NULL,
+  `title` varchar(30) NOT NULL,
+  `time_from` varchar(20) NOT NULL,
+  `time_to` varchar(20) NOT NULL
+
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+INSERT INTO `shift` (`id`, `title`, `time_from`,`time_to`) VALUES
+(1, 'Day', '10AM', '5PM'),
+(2, 'Night', '8PM', '8AM'),
+(3, 'Evening', '5PM', '8PM');
+
+ALTER TABLE `shift`
+  ADD PRIMARY KEY (`id`);
+
+
+
+ALTER TABLE `shift`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS `cell` (
+  `id` int(11) NOT NULL,
+  `title` varchar(30) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+
+
+INSERT INTO `cell` (`id`, `title`) VALUES
+(1, 'Network Cell'),
+(2, 'Security Cell'),
+(3, 'Inhouse Software Development Cell');
+
+ALTER TABLE `cell`
+  ADD PRIMARY KEY (`id`);
+
+
+
+ALTER TABLE `cell`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS `office_order` (
+  `id` int(11) NOT NULL,
+  `en_name` varchar(150) NOT NULL,
+  `bn_name` varchar(150) NOT NULL,
+  `designation` varchar(150) NOT NULL,
+  `shift` varchar(150) NOT NULL,
+  `datepicker` varchar(50) NOT NULL,
+  `time_from` varchar(50),
+  `time_to` varchar(50) 
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+ALTER TABLE `office_order`
+  ADD PRIMARY KEY (`id`);
+
+
+ALTER TABLE `office_order`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
